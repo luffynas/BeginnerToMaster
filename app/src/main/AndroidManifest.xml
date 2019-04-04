@@ -12,6 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ProfileActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,9 +26,9 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:scheme="http"
                     android:host="lazada.com"
-                    android:pathPattern="/promo" />
+                    android:pathPattern="/promo"
+                    android:scheme="http" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -36,14 +37,13 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:scheme="https"
                     android:host="lazada.com"
-                    android:pathPattern="/promo" />
+                    android:pathPattern="/promo"
+                    android:scheme="https" />
             </intent-filter>
         </activity>
 
         <service android:name=".StudenService" />
-
     </application>
 
 </manifest>
