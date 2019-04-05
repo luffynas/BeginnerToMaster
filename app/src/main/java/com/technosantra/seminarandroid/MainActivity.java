@@ -1,7 +1,5 @@
 package com.technosantra.seminarandroid;
 
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
@@ -9,7 +7,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,22 +18,27 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.d("Lifecycles", "onCreate");
 
-        final SharedPreferences sharedPref = getSharedPreferences("seminar", Context.MODE_PRIVATE);
+        final DatabaseHelper dbHelper = new DatabaseHelper(MainActivity.this);
 
-        final EditText txtUsername = findViewById(R.id.txtUsername);
-        final TextInputEditText txtAddress = findViewById(R.id.txtAddress);
+        final EditText txtNim = findViewById(R.id.txtNim);
+        final TextInputEditText txtNama = findViewById(R.id.txtNama);
 
         Button btnRequest = findViewById(R.id.btnSave);
         btnRequest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences.Editor editor = sharedPref.edit();
-                editor.putString("username", txtUsername.getText().toString());
-                editor.putString("address", txtAddress.getText().toString());
-                editor.apply();
 
-                txtUsername.setText("");
-                txtAddress.setText("");
+                String nim = txtNim.getText().toString();
+                String nama = txtNama.getText().toString();
+
+                Mahasiswa mahasiswa = new Mahasiswa();
+                mahasiswa.setNim(nim);
+                mahasiswa.setNama(nama);
+
+                dbHelper.createMahasiswa(mahasiswa);
+
+                txtNim.setText("");
+                txtNama.setText("");
             }
         });
 
@@ -42,9 +46,12 @@ public class MainActivity extends AppCompatActivity {
         btnShow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username = sharedPref.getString("username", "");
-                String address = sharedPref.getString("address", "");
-                Toast.makeText(MainActivity.this, "Username is : " + username + " Address is : " + address, Toast.LENGTH_SHORT).show();
+                List<Mahasiswa> mahasiswaList = dbHelper.getAllMahasiswa();
+                for (Mahasiswa mhs : mahasiswaList){
+                    Log.d("DATA", "NIM : "+mhs.getNim());
+                    Log.d("DATA", "NAMA : "+mhs.getNama());
+                    Log.d("DATA", "======================");
+                }
             }
         });
     }

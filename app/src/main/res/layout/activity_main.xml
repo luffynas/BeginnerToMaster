@@ -24,22 +24,22 @@
         android:text="Tampilkan Data"/>
 
     <EditText
-        android:id="@+id/txtUsername"
+        android:id="@+id/txtNim"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Type username"/>
+        android:hint="Type nim"/>
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <android.support.design.widget.TextInputEditText
-            android:id="@+id/txtAddress"
+            android:id="@+id/txtNama"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
             android:minLines="3"
-            android:hint="Type address"/>
+            android:hint="Type nama"/>
 
     </android.support.design.widget.TextInputLayout>
 </LinearLayout>
