@@ -9,12 +9,18 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
     }
 }
 
@@ -28,4 +34,11 @@ dependencies {
     implementation 'org.jetbrains:annotations-java5:15.0'
     implementation 'com.android.support:design:28.0.0'
     implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.okhttp3:okhttp:3.14.0'
+    implementation 'com.jakewharton.retrofit:retrofit1-okhttp3-client:1.1.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.14.0'
+    implementation 'com.android.support:multidex:1.0.3'
 }

@@ -12,34 +12,15 @@
         android:text="Materi Text, Button &amp; Container" />
 
     <Button
-        android:id="@+id/btnSave"
+        android:id="@+id/btnRetrofit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Simpan"/>
+        android:text="Only Retrofit"/>
 
     <Button
-        android:id="@+id/btnShow"
+        android:id="@+id/btnMix"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tampilkan Data"/>
+        android:text="Mix Retrofit &amp; OkHttp"/>
 
-    <EditText
-        android:id="@+id/txtNim"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Type nim"/>
-
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/txtNama"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:minLines="3"
-            android:hint="Type nama"/>
-
-    </android.support.design.widget.TextInputLayout>
 </LinearLayout>
