@@ -15,6 +15,18 @@
         android:id="@+id/btnRequest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Request Data"/>
+        android:text="Access Camera"/>
+
+    <Button
+        android:id="@+id/btnRequestGallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Access Gallery"/>
+
+    <ImageView
+        android:id="@+id/imgPreview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
 
 </LinearLayout>
