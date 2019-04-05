@@ -2,27 +2,31 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="Materi Layout" />
 
     <Button
-        android:id="@+id/btnProfile"
+        android:id="@+id/btnLinearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Detail Profile"/>
+        android:text="Linear Layout"/>
 
-    <FrameLayout
-        android:id="@+id/frameLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"></FrameLayout>
+    <Button
+        android:id="@+id/btnRelativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Relative Layout"/>
+
+    <Button
+        android:id="@+id/btnConstraintLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Constraint Layout"/>
 
 </LinearLayout>

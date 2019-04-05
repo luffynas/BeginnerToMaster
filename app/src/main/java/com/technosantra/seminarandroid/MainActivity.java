@@ -18,20 +18,30 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.d("Lifecycles", "onCreate");
 
-        Button btnProfile = findViewById(R.id.btnProfile);
-        btnProfile.setOnClickListener(new View.OnClickListener() {
+        Button btnLinearLayout = findViewById(R.id.btnLinearLayout);
+        Button btnRelativeLayout = findViewById(R.id.btnRelativeLayout);
+        Button btnConstraintLayout = findViewById(R.id.btnConstraintLayout );
+
+        btnLinearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, ProfileActivity.class));
+                startActivity(new Intent(MainActivity.this, LinearLayoutActivity.class));
             }
         });
 
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        btnLinearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, RelativeLayoutActivity.class));
+            }
+        });
 
-        ProfileFragment profileFragment = new ProfileFragment();
-        fragmentTransaction.add(R.id.frameLayout, profileFragment);
-        fragmentTransaction.commit();
+        btnLinearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ConstraintLayoutActivity.class));
+            }
+        });
     }
 
     @Override

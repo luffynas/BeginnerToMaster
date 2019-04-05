@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".LinearLayoutActivity"></activity>
+        <activity android:name=".ConstraintLayoutActivity" />
+        <activity android:name=".RelativeLayoutActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,8 +44,6 @@
                     android:scheme="https" />
             </intent-filter>
         </activity>
-
-        <service android:name=".StudenService" />
     </application>
 
 </manifest>
