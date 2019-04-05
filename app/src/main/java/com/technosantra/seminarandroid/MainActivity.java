@@ -10,7 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,30 +18,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.d("Lifecycles", "onCreate");
 
-        Button btnLinearLayout = findViewById(R.id.btnLinearLayout);
-        Button btnRelativeLayout = findViewById(R.id.btnRelativeLayout);
-        Button btnConstraintLayout = findViewById(R.id.btnConstraintLayout );
+        Button btnText = findViewById(R.id.btnText);
+        Button btnButton = findViewById(R.id.btnButton);
+        Button btnContainer = findViewById(R.id.btnContainer);
 
-        btnLinearLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, LinearLayoutActivity.class));
-            }
-        });
-
-        btnLinearLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, RelativeLayoutActivity.class));
-            }
-        });
-
-        btnLinearLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, ConstraintLayoutActivity.class));
-            }
-        });
+        btnText.setOnClickListener(this);
+        btnButton.setOnClickListener(this);
+        btnContainer.setOnClickListener(this);
     }
 
     @Override
@@ -72,5 +55,20 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         Log.d("Lifecycles", "onDestroy");
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.btnText:
+                startActivity(new Intent(MainActivity.this, TextActivity.class));
+                break;
+            case R.id.btnButton:
+                startActivity(new Intent(MainActivity.this, ButtonActivity.class));
+                break;
+            case R.id.btnContainer:
+                startActivity(new Intent(MainActivity.this, ContainerActivity.class));
+                break;
+        }
     }
 }

@@ -9,24 +9,24 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Materi Layout" />
+        android:text="Materi Text, Button &amp; Container" />
 
     <Button
-        android:id="@+id/btnLinearLayout"
+        android:id="@+id/btnText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Linear Layout"/>
+        android:text="Text"/>
 
     <Button
-        android:id="@+id/btnRelativeLayout"
+        android:id="@+id/btnButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Relative Layout"/>
+        android:text="Button"/>
 
     <Button
-        android:id="@+id/btnConstraintLayout"
+        android:id="@+id/btnContainer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Constraint Layout"/>
+        android:text="Container"/>
 
 </LinearLayout>
