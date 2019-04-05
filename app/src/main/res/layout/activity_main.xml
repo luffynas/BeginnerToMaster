@@ -12,21 +12,34 @@
         android:text="Materi Text, Button &amp; Container" />
 
     <Button
-        android:id="@+id/btnRequest"
+        android:id="@+id/btnSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Access Camera"/>
+        android:text="Simpan"/>
 
     <Button
-        android:id="@+id/btnRequestGallery"
+        android:id="@+id/btnShow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Access Gallery"/>
+        android:text="Tampilkan Data"/>
 
-    <ImageView
-        android:id="@+id/imgPreview"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/txtUsername"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
+        android:hint="Type username"/>
 
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/txtAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:minLines="3"
+            android:hint="Type address"/>
+
+    </android.support.design.widget.TextInputLayout>
 </LinearLayout>
