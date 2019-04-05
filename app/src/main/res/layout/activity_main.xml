@@ -12,21 +12,9 @@
         android:text="Materi Text, Button &amp; Container" />
 
     <Button
-        android:id="@+id/btnText"
+        android:id="@+id/btnRequest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Text"/>
-
-    <Button
-        android:id="@+id/btnButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"/>
-
-    <Button
-        android:id="@+id/btnContainer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Container"/>
+        android:text="Request Data"/>
 
 </LinearLayout>
